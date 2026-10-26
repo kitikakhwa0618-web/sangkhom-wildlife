@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สัตว์ป่าอำเภอสร้างคอม</title>
+  <meta name="description" content="สมุดบันทึกสัตว์ป่าอำเภอสร้างคอม จังหวัดอุดรธานี">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="place">อำเภอสร้างคอม · จังหวัดอุดรธานี</p>
+      <h1>สมุดบันทึกสัตว์ป่า<br>ริมทุ่ง ริมป่า ริมน้ำ</h1>
+      <p class="lead">รวบรวมสัตว์ที่พบได้ในพื้นที่อำเภอสร้างคอม เริ่มต้น 10 ชนิด เพิ่มได้เรื่อย ๆ จากการสังเกตของคนในพื้นที่</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="ค้นหาและกรอง">
+      <label class="search">
+        <span class="sr">ค้นหาสัตว์</span>
+        <input id="q" type="search" placeholder="ค้นหาชื่อไทย อังกฤษ หรือชื่อวิทยาศาสตร์">
+      </label>
+      <div id="chips" class="chips" role="group" aria-label="กรองตามกลุ่ม"></div>
+    </section>
+
+    <p id="count" class="count" aria-live="polite"></p>
+    <ul id="grid" class="grid"></ul>
+    <p id="empty" class="empty" hidden>ไม่พบสัตว์ที่ตรงกับคำค้น ลองลบตัวกรองหรือค้นด้วยคำอื่น</p>
+  </main>
+
+  <dialog id="dlg" aria-labelledby="d-title">
+    <form method="dialog"><button class="close" aria-label="ปิด">ปิด</button></form>
+    <div id="d-body"></div>
+  </dialog>
+
+  <footer class="wrap foot">
+    <p>ข้อมูลชุดแรกเป็นข้อมูลทั่วไปของสัตว์ที่พบในภาคตะวันออกเฉียงเหนือ ควรตรวจสอบกับบันทึกการพบเห็นจริงในพื้นที่ก่อนเผยแพร่เป็นทางการ</p>
+    <p>สถานะ IUCN อ้างอิงบัญชีแดงของ IUCN ตรวจสอบล่าสุดได้ที่ iucnredlist.org</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
